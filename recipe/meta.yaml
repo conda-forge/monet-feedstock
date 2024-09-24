@@ -1,5 +1,5 @@
 {% set name = "monet" %}
-{% set version = "2.2.10" %}
+{% set version = "2.2.11" %}
 
 package:
   name: monet
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://github.com/noaa-oar-arl/MONET/archive/v{{ version }}.tar.gz
-  sha256: 2a3d21e7be260661fa5e51ea1bbb9263aab2a46633b8737228c113e15ee4adbe
+  sha256: 9f9b4a9d23d4cdd190bc3ce5f61528ed28994d65db9f8bdca6a1f70aba0cd06a
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
   build:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
     - numpy
