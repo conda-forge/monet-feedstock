@@ -10,28 +10,30 @@ source:
   sha256: 04a8133c0117f992ce5a40ea3c412bd170ca6fb1a0b5289d9d5e481a2e6c0f66
 
 build:
-  number: 0
+  noarch: python
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
   build:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools
   run:
-    - python
+    - python >=3.6
+    #
+    - cartopy
+    - dask
+    - matplotlib-base
     - numpy
     - pandas
-    - xarray
-    - dask
-    - cartopy
-    - matplotlib-base
-    - seaborn
+    - pydecorate
     - pyresample
     - python-stratify
-    - pydecorate
-    - xesmf  # [not win]
+    - seaborn
+    - xarray
+    - xesmf
 test:
   imports:
     - monet
