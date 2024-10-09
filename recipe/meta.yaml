@@ -22,16 +22,17 @@ requirements:
     - setuptools
   run:
     - python
+    #
+    - cartopy
+    - dask
+    - matplotlib-base
     - numpy
     - pandas
-    - xarray
-    - dask
-    - cartopy
-    - matplotlib-base
-    - seaborn
+    - pydecorate
     - pyresample
     - python-stratify
-    - pydecorate
+    - seaborn
+    - xarray
     - xesmf
 test:
   imports:
