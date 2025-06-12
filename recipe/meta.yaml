@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/noaa-oar-arl/MONET/archive/v{{ version }}.tar.gz
-  sha256: 04a8133c0117f992ce5a40ea3c412bd170ca6fb1a0b5289d9d5e481a2e6c0f66
+  sha256: 2989c051fbf81080f05b9454bd9e4e3da0a38ed7001f1f78a0d99876985fd8cf
 
 build:
   noarch: python
